@@ -8,7 +8,7 @@ export default defineConfig(({mode}) => {
 
   return {
     // GitHub Project Pages deploy under /<repo>/
-    base: mode === 'production' ? '/MukharramPortfolio/' : '/',
+    base: mode === 'production' ? '/Mukharramdeveloper/' : '/',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
