@@ -45,7 +45,7 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-beige-500/30 selection:text-white relative">
         <div className="fixed inset-0 pointer-events-none z-0">
@@ -62,5 +62,4 @@ export default function App() {
     </BrowserRouter>
   );
 }
-
 
