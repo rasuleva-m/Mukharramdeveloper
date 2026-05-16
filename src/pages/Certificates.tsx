@@ -1,54 +1,55 @@
 import { motion } from 'motion/react';
 import { ExternalLink, Award, Shield, Cpu, Code, Download } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
+import { assetUrl } from '../utils/assetUrl';
 
 const certificates = [
   {
     title: 'Innovation Hackathon',
     issuer: 'Digital Excellence Award',
-    image: '/certificates/Hackathon.jpg',
+    image: 'certificates/Hackathon.jpg',
     id: 'HACK-01',
     icon: <Code className="text-gold" size={20} />
   },
   {
     title: 'Professional Code Mastery',
     issuer: 'HC Engineering',
-    image: '/certificates/HCcertificate.jpg',
+    image: 'certificates/HCcertificate.jpg',
     id: 'HC-77',
     icon: <Shield className="text-gold" size={20} />
   },
   {
     title: 'Summer School on Math & AI',
     issuer: 'Harbin Institute of Technology',
-    image: '/certificates/ChinaCertificate.jpg',
+    image: 'certificates/ChinaCertificate.jpg',
     id: 'CH-01',
     icon: <Award className="text-gold" size={20} />
   },
   {
     title: 'International Tech Forum',
     issuer: 'School of Mathematics and AI',
-    image: '/certificates/ChinaPersonal.jpg',
+    image: 'certificates/ChinaPersonal.jpg',
     id: 'IF-2024',
     icon: <Cpu className="text-gold" size={20} />
   },
   {
     title: 'Red Bull Partnership',
     issuer: 'Red Bull International',
-    image: '/certificates/Red_BullPartnyorship.jpg',
+    image: 'certificates/Red_BullPartnyorship.jpg',
     id: 'RB-P1',
     icon: <Award className="text-gold" size={20} />
   },
   {
     title: 'Red Bull Basement',
     issuer: 'Candidate Certification',
-    image: '/certificates/Red_Bullcandidate.jpg',
+    image: 'certificates/Red_Bullcandidate.jpg',
     id: 'RB-C2',
     icon: <Shield className="text-gold" size={20} />
   },
   {
     title: 'Vibe Coding Excellence',
     issuer: 'Innovation Award',
-    image: '/certificates/vibe_coding.jpg',
+    image: 'certificates/vibe_coding.jpg',
     id: 'VC-01',
     icon: <Code className="text-gold" size={20} />
   }
@@ -83,7 +84,7 @@ export default function Certificates() {
           >
             <div className="aspect-[3/2] rounded-[32px] overflow-hidden glass mb-8 relative">
                <img 
-                 src={cert.image} 
+                 src={assetUrl(cert.image)} 
                  alt={cert.title} 
                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                />

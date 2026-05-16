@@ -2,9 +2,11 @@ import { motion } from 'motion/react';
 import { ArrowRight, Bot, Globe, Smartphone, ShoppingCart, MessageSquare, ShieldCheck, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
+import { assetUrl } from '../utils/assetUrl';
 
 export default function Home() {
   const { t } = useTranslation();
+  const heroImageUrl = assetUrl('Portfoliomainimage.png');
 
   const services = [
     {
@@ -39,11 +41,11 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center pt-20">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/Portfoliomainimage.png" 
+            src={heroImageUrl} 
             alt="Mukharram Rasuleva - Founder & CEO" 
             className="w-full h-full object-cover object-[center_20%] md:object-[center_top] opacity-60 md:opacity-80 mix-blend-normal"
             onError={(e) => {
-              (e.target as HTMLImageElement).src = "/Portfoliomainimage.png";
+              (e.target as HTMLImageElement).src = heroImageUrl;
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-body via-body/40 to-transparent"></div>

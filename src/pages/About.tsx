@@ -1,9 +1,11 @@
 import { motion } from 'motion/react';
 import { Target, Code2, GraduationCap } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
+import { assetUrl } from '../utils/assetUrl';
 
 export default function About() {
   const { t } = useTranslation();
+  const portraitUrl = assetUrl('Portfoliomainimage.png');
 
   const skills = [
     { name: t('about.skills.ai', 'Python & AI'), level: 98 },
@@ -67,7 +69,7 @@ export default function About() {
           <div className="relative">
              <div className="aspect-[4/5] rounded-[40px] overflow-hidden glass relative z-10">
                 <img 
-                  src="/Portfoliomainimage.png" 
+                  src={portraitUrl} 
                   alt="Mukharram Rasuleva" 
                   className="w-full h-full object-cover transition-all duration-700"
                 />
